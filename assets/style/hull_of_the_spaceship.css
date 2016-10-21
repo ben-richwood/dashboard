@@ -155,10 +155,11 @@ section#todoList,
 #todoList {
   width: 25%;
   max-width: 350px;
-  height: 100%;
-  background-color: #dedede;
-  padding: 10px;
+  background-color: #FBFDFE;
+  height:100%;
+  border-right:solid 1px #dedede;
 }
+#todoList #timer_pomodoro{height:50px;background-color:#b9b9b9;min-height: 150px;}
 #todoList #timer_pomodoro ul{
     display: flex;
     -webkit-justify-content: space-between;
@@ -171,6 +172,13 @@ section#todoList,
     display: list-item;
     list-style: none;
 }
+#list_items{display:table;width:100%;}
+.single_item{display:table-row;width:100%;}
+.single_item .title_item{display:table-cell;}
+.single_item .length_time{text-align: right;}
+.single_item > div{padding:10px;}
+
+#total_pomodoro{text-align:right;margin-top:15px;color:#505050;padding:10px;}
 /* **************************************************
 MEDIA QUERIES
 *****************************************************/

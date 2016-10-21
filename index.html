@@ -30,8 +30,8 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
    	<meta name="keywords" content="dashboard, Github, Todo List, HTML5, CSS3, JavaScript, Angular, jQuery, cookie">
 
    	<!-- FAVICONS -->
-   	<link rel="icon" href="img/flavicon.ico">
-   	<link rel="apple-touch-icon" href="img/flavicon.ico">
+   	<link rel="icon" href="assets/img/flavicon.ico">
+   	<link rel="apple-touch-icon" href="assets/img/flavicon.ico">
 
    	<script>
 	    var larg = window.innerWidth, haut = window.innerHeight, language = "";
@@ -76,8 +76,6 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 	<meta name="twitter:description" content="Le portfolio de Ben Richwood" />
 	<meta name="twitter:image" content="http://richebois.fr/img/og-image-large.png" />
 	<meta name="twitter:url" content="http://richebois.fr" />
-
-	<!--<script src='https://www.google.com/recaptcha/api.js'></script>-->
 	</head>
 	
 	<body>
@@ -87,14 +85,24 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 				<div id="timer_pomodoro">
 					<ul>
 						<li>Play</li>
-						<li>compteur</li>
+						<li>Countdown</li>
 						<li>Reset</li>
 					</ul>
 				</div> <!-- End of #timer_pomodoro -->
-				<div class="add_new_item"></div>
+				<div class="add_new_item">+</div>
 				<div id="list_items">
-					
+					<div class="single_item">
+						<div class="title_item">
+							Title<br>
+							Stripes pomodoro
+						</div>
+						<div class="length_time">
+							Total timer<br>
+							X
+						</div>
+					</div>
 				</div> <!-- End of #list_items -->
+				<div id="total_pomodoro">Durée totale</div>
 			</div>
 		</section> <!-- End of #todoList -->
 
