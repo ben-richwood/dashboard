@@ -157,6 +157,19 @@ section#todoList,
   max-width: 350px;
   height: 100%;
   background-color: #dedede;
+  padding: 10px;
+}
+#todoList #timer_pomodoro ul{
+    display: flex;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    justify-content: space-between;
+    padding: 0;
+}
+#todoList #timer_pomodoro ul li{
+    display: inline;
+    display: list-item;
+    list-style: none;
 }
 /* **************************************************
 MEDIA QUERIES
