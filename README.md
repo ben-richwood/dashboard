@@ -9,7 +9,7 @@ Here is a [example of the result](http://richebois.fr).
 
 `hull_of_the_spaceship` for style(sheet), and `Twin_Ionic_Engine` for the gear behind that.
 
-SCSS, (maybe CoffeeScript?), perhaps HAML?, react
+SCSS, (maybe CoffeeScript?), perhaps HAML?, react, Grunt, Modernizer
 
 ---
 ## Features

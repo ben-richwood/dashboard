@@ -1,0 +1,34 @@
+{
+  "name": "dashboard",
+  "version": "1.0.0",
+  "description": "Personal Dashboard for efficient personal and professionnal work",
+  "main": "index.js",
+  "dependencies": {
+    "grunt": "^1.0.1"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ben-richwood/dashboard.git"
+  },
+  "keywords": [
+    "Dashboard",
+    "personal",
+    "professionnal",
+    "Grunt",
+    "Modernizr",
+    "less",
+    "JS"
+  ],
+  "author": "Ben RICHEBOIS",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ben-richwood/dashboard/issues"
+  },
+  "homepage": "https://github.com/ben-richwood/dashboard#readme"
+}
