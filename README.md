@@ -2,8 +2,7 @@
 
 *Created by Ben Richwood, by a deep moment of loneliness (in a coffee in Hô Chi Minh City)*
 
-Here is a [example of the result](http://richebois.fr).
----
+Here is a [example of the result](http://lab.richebois.fr/dashboard).
 
 ## What is it for?
 
@@ -11,9 +10,10 @@ I'm fed up fancy/material/flat/user-friendly app. This dashboard is for true dev
 
 `hull_of_the_spaceship` for style(sheet), and `Twin_Ionic_Engine` for the gear behind that.
 
-SCSS, (maybe CoffeeScript?), perhaps HAML?, react, Grunt, Modernizer
+langage / techno => HTML/CSS, JavaScript, jQuery, Grunt (+NPM), JSON, PHP
+Maybe also: LESS, CoffeeScript (?), Angular (?),
 
-IE8+, not before
+IE8+ works - not before
 
 ---
 ## Features
