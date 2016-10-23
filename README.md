@@ -7,9 +7,13 @@ Here is a [example of the result](http://richebois.fr).
 
 ## What is it for?
 
+I'm fed up fancy/material/flat/user-friendly app. This dashboard is for true dev, ones who love dark background, font that permit to reconize between 0 or o; for guys who prefer to write incomprehensible phrases with flags and shortcuts rather than clicking on balanced button with smooth effects. 
+
 `hull_of_the_spaceship` for style(sheet), and `Twin_Ionic_Engine` for the gear behind that.
 
 SCSS, (maybe CoffeeScript?), perhaps HAML?, react, Grunt, Modernizer
+
+IE8+, not before
 
 ---
 ## Features

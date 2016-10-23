@@ -142,24 +142,53 @@ body > script {
 REAL STYLE BABY!
 *****************************************************/
 body {
-  background-color: #fff;
+  /*background-color: #fff;*/
+  background-color: #222;
   color: #000;
-  font-family: "Century Gothic", helvetica, arial, sans-serif;
+  /*font-family: "Century Gothic", helvetica, arial, sans-serif;*/
+  font-family: "Source Code Pro", Menlo, Monaco, "Consolas", "Courier New", "Courier";
   font-size: 1.4em;
   /* equiv 14px */
   line-height: 1.5;
   /* adapt to your design */
   height: 100%;
 }
+#tableContainer{width: 100%;}
+
+/* TODO LIST
+*****************************************************/
+#tableContainer{display:table;height:100%;}
+#tableContainer>div{display:table-row;height:100%}
+#tableContainer>div>section{display:table-cell;height:100%}
+#tableContainer>div>section:nth-of-type(2){width:100%;}
+#tableContainer>div>section:nth-of-type(2){position:relative;}
+
 section#todoList,
 #todoList {
   width: 25%;
-  max-width: 350px;
+  max-width: 340px;
+  min-width:150px;
   background-color: #FBFDFE;
   height:100%;
   border-right:solid 1px #dedede;
 }
-#todoList #timer_pomodoro{height:50px;background-color:#b9b9b9;min-height: 150px;}
+#pomodoroPlay, #pomodoroReset{
+  cursor:pointer;
+  padding: 6px;
+}
+
+#pomodoroTimer{
+    font-size: 40px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 'light';
+}
+
+#add_new_item{
+  cursor:pointer;
+  padding: 6px;
+  background-color: #cdcdcd;
+}
+#todoList #timer_pomodoro{background-color:#b9b9b9;height: 90px;}
 #todoList #timer_pomodoro ul{
     display: flex;
     -webkit-justify-content: space-between;
@@ -173,12 +202,92 @@ section#todoList,
     list-style: none;
 }
 #list_items{display:table;width:100%;}
-.single_item{display:table-row;width:100%;}
-.single_item .title_item{display:table-cell;}
+#list_items > div, .single_item{display:table-row;width:100%;}
+#list_items > div > div, .single_item .title_item{display:table-cell;padding:5%;}
 .single_item .length_time{text-align: right;}
 .single_item > div{padding:10px;}
-
 #total_pomodoro{text-align:right;margin-top:15px;color:#505050;padding:10px;}
+
+/* CLI
+*****************************************************/
+div#commandLine{
+  position:absolute;
+  bottom:0;
+  border-top:1px solid #555;
+  padding:6px 0 12px 10px;
+  width:100%;
+  color:#fff;
+  font-size: 20px;
+  background-color: #1c1c1c;
+  box-sizing: border-box;
+}
+.gravityBlue{
+  border: 1px solid #a3ece7;
+  padding: 4px;
+  background-color: #a3ece7;
+  color: #000;
+  font-family: "Source Code Pro", Menlo, Monaco, "Consolas", "Courier New", "Courier";
+  line-height: 1.3em;
+  cursor: pointer;
+}
+
+div#commandLine form button{
+  padding: 4px;
+  font-weight: bold;
+}
+div#commandLine form button:hover{
+  background-color: #1c1c1c;
+  color: #fff;
+  border: 1px solid #a3ece7;
+}
+input#CLI{
+  background-color: #1c1c1c;
+  color:#fff;
+  border:0;
+  width: 90%;
+  font-size: 20px;
+  font-family: "Source Code Pro", Menlo, Monaco, "Consolas", "Courier New", "Courier";
+  /*border: 1px solid #a3ece7;*/
+}
+input#CLI:focus, input#CLI:active{
+  border:0;
+  outline: none;
+}
+
+/* POPUP
+*****************************************************/
+#popup{
+  display:none;
+  position:fixed;
+  width: 500px;
+  max-width: 650px;
+  left:33%;
+  top:110px;
+  z-index: 100;
+  border: 4px solid #96E1E6;
+  color: #fff;
+  padding: 0 0 20px 0;
+  box-shadow: 0px 0px 20px rgba(0,0,0,0.3);
+}
+#popup #menuTop{
+    height: 22px;
+    background-color: #96E1E6;
+    color: #000;
+    position: relative;
+}
+#popup form{margin: 15px auto;width:80%;}
+#popup form input{font-family: "Source Code Pro", Menlo, Monaco, "Consolas", "Courier New", "Courier";}
+#popup form label{display: block;}
+#popup form input{width: 80%;font-size:18px;}
+#popup form input[type="number"]{width: 50px;height:30px;font-size: 22px;}
+#popup form input[type="time"]{width: 130px;height:30px;font-size: 16px;}
+#popup form button[type="button"]{
+  display: block;
+  margin-top:25px;
+  padding: 6px 14px;
+  font-size: 27px;
+  font-weight: lighter, 200;
+}
 /* **************************************************
 MEDIA QUERIES
 *****************************************************/

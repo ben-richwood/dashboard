@@ -25,12 +25,12 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
    	<!-- BASIC INFO -->
-   	<title>Personal Dashboard</title>
+   	<title name="title">Personal Dashboard</title>
    	<meta name="author" content="Ben Richwood">
    	<meta name="keywords" content="dashboard, Github, Todo List, HTML5, CSS3, JavaScript, Angular, jQuery, cookie">
 
    	<!-- FAVICONS -->
-   	<link rel="icon" href="assets/img/flavicon.ico">
+   	<link rel="icon" name='flavicon' href="assets/img/flavicon.ico">
    	<link rel="apple-touch-icon" href="assets/img/flavicon.ico">
 
    	<script>
@@ -47,7 +47,7 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 	
 	<!-- GOOGLE FONT
 	================================= -->
-	<link href='https://fonts.googleapis.com/css?family=Roboto+Slab:300|Roboto:400|Raleway:900' rel='stylesheet' type='text/css'>
+	<!-- <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:300|Roboto:400|Raleway:900' rel='stylesheet' type='text/css'> -->
 
 	<!-- **OPEN GRAPH** -->
 	<link rel="canonical" href="http://richebois.fr" />
@@ -80,39 +80,69 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 	
 	<body>
 
-		<section id="todoList">
+		<div id="tableContainer"><!-- table -->
 			<div>
-				<div id="timer_pomodoro">
-					<ul>
-						<li>Play</li>
-						<li>Countdown</li>
-						<li>Reset</li>
-					</ul>
-				</div> <!-- End of #timer_pomodoro -->
-				<div class="add_new_item">+</div>
-				<div id="list_items">
-					<div class="single_item">
-						<div class="title_item">
-							Title<br>
-							Stripes pomodoro
-						</div>
-						<div class="length_time">
-							Total timer<br>
-							X
-						</div>
-					</div>
-				</div> <!-- End of #list_items -->
-				<div id="total_pomodoro">Durée totale</div>
-			</div>
-		</section> <!-- End of #todoList -->
 
+				<section id="todoList">
+					<div>
+						<div id="timer_pomodoro">
+							<ul>
+								<li id="pomodoroPlay">Play</li>
+								<li id="pomodoroTimer">25:00</li>
+								<li id="pomodoroReset">Reset</li>
+							</ul>
+						</div> <!-- End of #timer_pomodoro -->
+						<div id="add_new_item" onclick="popup.style.display = 'block';document.getElementById('formTaskName').focus();">+ Add a new task</div>
+						<div id="list_items">
+							<!-- <div class="single_item">
+								<div class="title_item">
+									Title<br>
+									Stripes pomodoro
+								</div>
+								<div class="length_time">
+									Total timer<br>
+									X	
+								</div>
+							</div> -->
+						</div> <!-- End of #list_items -->
+						<div id="total_pomodoro">Total time</div>
+					</div>
+				</section> <!-- End of #todoList -->
+
+				<section>
+					<div id="commandLine">
+						<form id="morework" action="#">
+							$ <input type="text" id="CLI" />
+							<button class="gravityBlue" type="submit" id="submit">/>_Submit</button>
+							<button class="gravityBlue" type="reset" id="reset">Clear</button>
+						</form>
+					</div>
+				</section>
+
+				<div id="popup">
+					<div id="menuTop"></div>
+					<form action="#">
+						<h2>New task</h2>
+						<label for="pomodoroName">What's the name of your task?</label>
+						<input type="text" id="formTaskName">
+						<label for="pomodoroOccurence">How many pomodoro do you estimate?</label>
+						<input type="number" id="formTaskPomodoro">
+						<label for="pomodoroDeadline">What is your deadline? <em>Before what do you have to finish?</em></label>
+						<input type="time" id="formTaskDeadline">
+						<button class="gravityBlue" type="button" onclick='createNewTask()'>+</button>
+					</form>
+				</div>
+
+			</div>
+		</div>
 
 
 	<!-- SCRIPT
 	================================= -->	
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-	<script type="text/javascript" src="JS/velocity.js"></script>
-	<script type="text/javascript" src="assets/script/Twin-Ionic_Engine.js"></script>
+	<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>-->
+	<script type="text/javascript" src="assets/script/Twin_Ionic_Engine.js"></script>
+	<script type="text/javascript" src="assets/script/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="assets/script/jquery.countdown.min.js"></script>
 	</body>
 	
 </html>
