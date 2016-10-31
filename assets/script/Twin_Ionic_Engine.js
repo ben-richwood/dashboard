@@ -25,7 +25,7 @@
 
 	//document.querySelector("#add_new_item").addEventListener("click", function(){createNewTask();});
 
-	document.querySelector("#pomodoroPlay").addEventListener("click", function(){PomodoroTimer02(1);});
+	document.querySelector("#pomodoroPlay").addEventListener("click", function(){PomodoroTimer02(10);});
 	// document.querySelector("#pomodoroTimer").addEventListener("click", function(){PomodoroTimer02(1);});
 
 	document.querySelector("#pomodoroReset").addEventListener("click", function(){ window.clearTimeout(timeouts); });
@@ -75,10 +75,13 @@
 		//node.className = "single_item";
 		nodeTaskName = document.createElement("DIV");
 		//nodeTaskName.className = "length_time";
-	    textnode = document.createTextNode(task.name+'<br>'+task.pomodoro_length);
-	    console.log(textnode);
-		nodeTaskName.appendChild(textnode);
-	    	    document.querySelector('#list_items').appendChild(node);
+	    textnode = document.createTextNode(task.name);
+	    textnode02 = document.createTextNode('<br>');
+	    textnode03 = document.createTextNode(task.pomodoro_length);
+	    console.log(textnode+textnode02+textnode03);
+	    taskNoun = textnode+textnode02+textnode03;
+		nodeTaskName = taskNoun.appendChild(taskNoun);
+		document.querySelector('#list_items').appendChild(nodeTaskName);
 	    document.querySelector('#list_items').lastChild.appendChild(nodeTaskName);
 	    document.querySelector('#list_items').lastChild.appendChild(document.createElement("DIV"));;
 	}
@@ -100,6 +103,9 @@
 		$("#pomodoroTimer").countdown(timeLapse)
 		.on('update.countdown', function(event){
 			$(this).text(event.strftime('%M:%S'));
+			if('%M'>59){
+				console.log('Dayum! Au dessus de 59 !');
+			}else{}
 		})
 		.on('finish.countdown', function(){
 			document.querySelector('title').innerHTML = "Time is over!";
